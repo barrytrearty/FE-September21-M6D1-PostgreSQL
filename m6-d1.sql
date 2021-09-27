@@ -190,7 +190,7 @@ SELECT category, published_at FROM public.books
 SELECT COUNT(*) FROM public.books
 
 -- Select authors and order them by age (calculate age in SQL, search about it 🤓) ASC
-SELECT date_part('year', CURRENT_DATE) - birth_year as age FROM public.authors
+SELECT name, last_name, date_part('year', CURRENT_DATE) - birth_year as age FROM public.authors
 
 -- Select authors and order them by birth_year desc
 SELECT * FROM public.authors ORDER BY birth_year DESC
